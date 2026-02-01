@@ -1,147 +1,131 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f6c1cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      width: 320px;
+    }
+
+    .face {
+      font-size: 64px;
+      position: relative;
+    }
+
+    .heart {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      font-size: 24px;
+    }
+
+    h2 {
+      margin: 20px 0 30px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #yes {
+      background: #e63973;
+      color: white;
+      font-weight: 600;
+    }
+
+    #yes:hover {
+      transform: scale(1.05);
+    }
+
+    #no {
+      background: #eaeaea;
+      color: #444;
+      position: absolute;
+      right: -10px;
+    }
+
+    .hint {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Will You Be My Valentine?&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f6c1cc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px 50px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 20px 40px rgba(0,0,0,0.15);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 320px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.face {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 64px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.heart {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>right: -10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: -10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 20px 0 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.buttons {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 28px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#yes {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #e63973;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#yes:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.05);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>#no {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #eaeaea;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>right: -10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hint {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="face"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>🐶</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="heart"&gt;❤️&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Harshita&lt;/strong&gt; will you be my valentine?</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="buttons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="yes" onclick="yesClicked()"&gt;Yes&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="no" onmouseover="moveNo()"&gt;No&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hint"&gt;“No” seems a bit shy 😈&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function moveNo() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const noBtn = document.getElementById("no");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const x = Math.random() * 120 - 60;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const y = Math.random() * 80 - 40;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>noBtn.style.transform = `translate(${x}px, ${y}px)`;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function yesClicked() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.body.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="</p>
-<p class="p1"><span class="Apple-converted-space">          </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>height:100vh;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>font-family:sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>background:#f6c1cc;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>text-align:center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1&gt;💖 YAY! 💖&lt;br&gt;Best Valentine Ever 🥹&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <div class="card">
+    <div class="face">
+      🐱
+      <span class="heart">❤️</span>
+    </div>
+
+    <h2>
+      <strong>nirali</strong> will you be my valentine?
+    </h2>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes</button>
+      <button id="no" onmouseover="moveNo()">No</button>
+    </div>
+
+    <div class="hint">“No” seems a bit shy 😈</div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 120 - 60;
+      const y = Math.random() * 80 - 40;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          height:100vh;
+          font-family:sans-serif;
+          background:#f6c1cc;
+          text-align:center;
+        ">
+          <h1>💖 YAY! 💖<br>Best Valentine Ever 🥹</h1>
+        </div>
+      `;
+    }
+  </script>
+
 </body>
 </html>
